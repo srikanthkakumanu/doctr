@@ -1,0 +1,20 @@
+server:
+    name: doctr
+    port: 9091
+spring:
+    datasource:
+        driverClassName: org.h2.Driver
+        url: jdbc:h2:mem:doctordb;DB_CLOSE_DELAY=-1
+#        url: jdbc:h2:file:/home/vagrant/practice//data/testdb
+        username: sa
+        password: 
+    jpa:
+        show-sql: true
+        properties.hibernate.dialect: org.hibernate.dialect.H2Dialect
+        hibernate.ddl-auto: update
+
+spring.h2.console.enabled: true
+spring.h2.console.path: /h2
+spring.h2.console.settings.web-allow-others: false
+
+

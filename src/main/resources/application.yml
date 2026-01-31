@@ -1,6 +1,6 @@
 server:
     name: doctr
-    port: 9091
+    port: 9092
 spring:
     datasource:
         driverClassName: org.h2.Driver

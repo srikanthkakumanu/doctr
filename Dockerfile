@@ -12,7 +12,7 @@ WORKDIR /app
 COPY --from=build /home/gradle/src/build/libs/*.jar app.jar
 
 # Expose the port the application runs on
-EXPOSE 9091
+EXPOSE 9092
 
 # Run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]

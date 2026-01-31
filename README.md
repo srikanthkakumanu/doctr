@@ -59,7 +59,7 @@ This project is a simple Spring Boot microservice for managing doctors. It provi
     ./gradlew bootRun
     ```
 
-The application will start on `http://localhost:9091`.
+The application will start on `http://localhost:9092`.
 
 **Note**: The API endpoints require authentication. Use HTTP Basic Auth with username `admin` and password `password` when making API calls.
 
@@ -73,14 +73,14 @@ The application will start on `http://localhost:9091`.
 
 2. Run the container:
    ```bash
-   docker run -p 9091:9091 doctr
+   docker run -p 9092:9092 doctr
    ```
 
 ## Accessing the H2 Database Console
 
 To view and interact with the data directly, you can enable the H2 web console. The project is already configured for this.
 
-- **H2 Console**: [http://localhost:9091/h2](http://localhost:9091/h2)
+- **H2 Console**: [http://localhost:9092/h2](http://localhost:9092/h2)
 
 Use the default settings to connect (`JDBC URL: jdbc:h2:mem:docterdb`).
 
@@ -105,7 +105,7 @@ Use the default settings to connect (`JDBC URL: jdbc:h2:mem:docterdb`).
     ./gradlew bootRun
     ```
 
-The application will start on `http://localhost:9091`.
+The application will start on `http://localhost:9092`.
 
 **Note**: The API endpoints require authentication. Use HTTP Basic Auth with username `admin` and password `password` when making API calls.
 
@@ -113,7 +113,7 @@ The application will start on `http://localhost:9091`.
 
 To view and interact with the data directly, you can enable the H2 web console. The project is already configured for this.
 
-- **H2 Console**: [http://localhost:9091/h2](http://localhost:9091/h2)
+- **H2 Console**: [http://localhost:9092/h2](http://localhost:9092/h2)
 
 Use the default settings to connect (`JDBC URL: jdbc:h2:mem:doctordb`).
 
@@ -162,10 +162,10 @@ All API responses follow HATEOAS principles and include hypermedia links in the 
   "city": "Anytown",
   "pincode": "12345",
   "_links": {
-    "self": { "href": "http://localhost:9091/api/doctors/1" },
-    "update": { "href": "http://localhost:9091/api/doctors/1" },
-    "delete": { "href": "http://localhost:9091/api/doctors/1" },
-    "doctors": { "href": "http://localhost:9091/api/doctors" }
+    "self": { "href": "http://localhost:9092/api/doctors/1" },
+    "update": { "href": "http://localhost:9092/api/doctors/1" },
+    "delete": { "href": "http://localhost:9092/api/doctors/1" },
+    "doctors": { "href": "http://localhost:9092/api/doctors" }
   }
 }
 ```
@@ -182,9 +182,9 @@ All API responses follow HATEOAS principles and include hypermedia links in the 
     "number": 0
   },
   "_links": {
-    "self": { "href": "http://localhost:9091/api/doctors?page=0&size=10" },
-    "next": { "href": "http://localhost:9091/api/doctors?page=1&size=10" },
-    "create": { "href": "http://localhost:9091/api/doctors" }
+    "self": { "href": "http://localhost:9092/api/doctors?page=0&size=10" },
+    "next": { "href": "http://localhost:9092/api/doctors?page=1&size=10" },
+    "create": { "href": "http://localhost:9092/api/doctors" }
   }
 }
 ```
@@ -224,7 +224,7 @@ The API implements OWASP security best practices:
 
 Once the application is running, you can access the interactive Swagger UI to explore the API endpoints in detail.
 
-- **Swagger UI**: [http://localhost:9091/swagger-ui.html](http://localhost:9091/swagger-ui.html)
+- **Swagger UI**: [http://localhost:9092/swagger-ui.html](http://localhost:9092/swagger-ui.html)
 
 ## Running Tests
 
